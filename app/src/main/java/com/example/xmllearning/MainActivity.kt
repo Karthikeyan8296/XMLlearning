@@ -2,7 +2,6 @@ package com.example.xmllearning
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -11,7 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    fun showToast(value: String){
+    fun showToast(value: String) {
         Toast.makeText(applicationContext, value, Toast.LENGTH_SHORT).show()
     }
 
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<LinearLayout>(R.id.btnNext).setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(applicationContext, MainActivity2::class.java)
             startActivity(intent)
         }
     }
