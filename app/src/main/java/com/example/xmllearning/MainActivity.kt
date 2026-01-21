@@ -27,13 +27,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        //Directly go to the fragment on app starts
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, WelcomeFragment())
-                .commit()
-        }
     }
 
     override fun onStart() {
