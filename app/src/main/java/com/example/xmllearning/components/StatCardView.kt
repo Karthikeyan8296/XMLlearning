@@ -1,14 +1,16 @@
-package com.example.xmllearning
+package com.example.xmllearning.components
 
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.withStyledAttributes
+import com.example.xmllearning.R
 
 class StatCardView @JvmOverloads constructor(
     context: Context,
-    attrs: AttributeSet? = null,
+    attrs: AttributeSet?,
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
@@ -26,17 +28,16 @@ class StatCardView @JvmOverloads constructor(
         label = findViewById(R.id.stat_label)
 
         attrs?.let {
-            orientation = VERTICAL
-            val ta = context.obtainStyledAttributes(it, R.styleable.StatCardView)
+            context.withStyledAttributes(it, R.styleable.StatCardView) {
 
-            icon.setImageResource(
-                ta.getResourceId(R.styleable.StatCardView_iconSrc, 0)
-            )
-            value.text = ta.getString(R.styleable.StatCardView_valueText)
-            unit.text = ta.getString(R.styleable.StatCardView_unitText)
-            label.text = ta.getString(R.styleable.StatCardView_labelText)
+                icon.setImageResource(
+                    getResourceId(R.styleable.StatCardView_iconSrc, 0)
+                )
+                value.text = getString(R.styleable.StatCardView_valueText)
+                unit.text = getString(R.styleable.StatCardView_unitText)
+                label.text = getString(R.styleable.StatCardView_labelText)
 
-            ta.recycle()
+            }
         }
     }
 }

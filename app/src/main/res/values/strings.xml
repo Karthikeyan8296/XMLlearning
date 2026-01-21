@@ -1,11 +1,20 @@
 <resources>
     <string name="app_name">XML</string>
     <string name="see_all"><u>See all</u></string>
+
+<!--    statCard parameters-->
     <declare-styleable name="StatCardView">
         <attr name="iconSrc" format="reference"/>
         <attr name="valueText" format="string"/>
         <attr name="unitText" format="string"/>
         <attr name="labelText" format="string"/>
     </declare-styleable>
+
+<!--    home badge parameters-->
+    <declare-styleable name="HomeBadgeView">
+        <attr name="badgeLabel" format="string"/>
+        <attr name="badgeIcon" format="reference"/>
+    </declare-styleable>
+
 </resources>
 
