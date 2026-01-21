@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.xmllearning.screens.WelcomeFragment
 
 class MainActivity : AppCompatActivity() {
     fun showToast(value: String) {
@@ -21,15 +22,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         showToast("OnCreate")
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.fragmentContainer)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        findViewById<LinearLayout>(R.id.btnNext).setOnClickListener {
-            val intent = Intent(applicationContext, MainActivity2::class.java)
-            startActivity(intent)
+        //Directly go to the fragment on app starts
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, WelcomeFragment())
+                .commit()
         }
     }
 
