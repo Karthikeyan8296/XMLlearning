@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import com.example.xmllearning.R
 import com.example.xmllearning.utils.PASSWORD_PATTERN
 
@@ -17,11 +18,17 @@ class UserFragment : Fragment(R.layout.fragment_user) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val args: UserFragmentArgs by navArgs()
+        val username = args.name
+
         val name = view.findViewById<EditText>(R.id.etName)
         val email = view.findViewById<EditText>(R.id.etEmail)
         val password = view.findViewById<EditText>(R.id.etPassword)
         val btn = view.findViewById<Button>(R.id.btnContinue)
         val result = view.findViewById<TextView>(R.id.resultText)
+        var user = view.findViewById<TextView>(R.id.username)
+
+        user.text = username
 
         fun isValidEmail(email: CharSequence): Boolean {
             return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
