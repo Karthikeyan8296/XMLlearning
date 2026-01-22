@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.xmllearning.R
 import com.example.xmllearning.utils.PASSWORD_PATTERN
@@ -52,6 +53,8 @@ class UserFragment : Fragment(R.layout.fragment_user) {
                     "this is what you typed, name: $name | email: $email | password: $password"
                 )
                 result.text = "You typed: \nname: $name\nemail: $email\npassword: $password"
+
+                findNavController().navigate(R.id.action_userFragment_to_recycleFragment)
             }
         }
     }

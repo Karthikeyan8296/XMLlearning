@@ -37,5 +37,13 @@
             app:argType="string"
             app:nullable="false"
             />
+        <action
+            android:id="@+id/action_userFragment_to_recycleFragment"
+            app:destination="@id/recycleFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/recycleFragment"
+        android:name="com.example.xmllearning.screens.RecycleFragment"
+        android:label="fragment_recycle"
+        tools:layout="@layout/fragment_recycle" />
 </navigation>
