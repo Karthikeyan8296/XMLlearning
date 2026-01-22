@@ -12,7 +12,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
         val btnNext = view.findViewById<View>(R.id.btnNext)
         btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
+            findNavController().navigate(R.id.action_welcomeFragment_to_recycleFragment)
         }
     }
 }
