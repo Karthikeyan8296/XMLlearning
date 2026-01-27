@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.navArgument
+import com.example.xmllearning.screens.UserFragment
 import com.example.xmllearning.screens.WelcomeFragment
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +29,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        //from activity to fragment
+//        supportFragmentManager.beginTransaction()
+//            .replace(R.id.fragmentContainer, UserFragment())
+//            //back press enabled
+//            .addToBackStack(null)
+//            .commit()
     }
 
     override fun onStart() {

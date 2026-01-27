@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_welcomeFragment_to_recycleFragment"
             app:destination="@id/recycleFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_hetroFragment"
+            app:destination="@id/hetroFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -49,4 +52,9 @@
         android:name="com.example.xmllearning.screens.RecycleFragment"
         android:label="fragment_recycle"
         tools:layout="@layout/fragment_recycle" />
+    <fragment
+        android:id="@+id/hetroFragment"
+        android:name="com.example.xmllearning.screens.HetroFragment"
+        android:label="fragment_hetro"
+        tools:layout="@layout/fragment_hetro" />
 </navigation>

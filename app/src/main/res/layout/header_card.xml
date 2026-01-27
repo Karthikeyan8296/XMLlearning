@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/header_card_Id"
+    android:textColor="@color/white"
+    android:text="My Rooms data"
+    android:background="@color/black"
+    android:textAlignment="center"
+    android:textSize="24sp"
+    android:paddingVertical="24dp"
+    >
+</TextView>

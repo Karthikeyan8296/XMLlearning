@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/RoomCard"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <ImageView
+        android:id="@+id/roomBgImage"
+        android:layout_width="140dp"
+        android:layout_height="240dp"
+        app:circularflow_radiusInDP="24dp"
+        android:src="@drawable/bed"
+        />
+
+    <ImageView
+        android:id="@+id/roomIconType"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="58dp"
+        android:src="@drawable/office_icon"/>
+
+    <TextView
+        android:id="@+id/roomTypeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_18pt_bold"
+        android:text="Bedroom"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="44dp"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/roomDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_18pt_bold"
+        android:text="5 Devices"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="12dp"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/roomOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 On"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/inter_18pt_bold"
+        android:textSize="10sp"
+        android:textColor="@color/white"/>
+
+</FrameLayout>

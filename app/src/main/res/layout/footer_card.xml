@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:id="@+id/footer_card_Id"
+    android:text="+ add more rooms"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="24sp"
+    android:fontFamily="@font/inter_18pt_semibold"
+    android:paddingVertical="24dp"
+    >
+
+</TextView>
